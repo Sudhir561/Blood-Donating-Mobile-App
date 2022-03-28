@@ -1,11 +1,11 @@
 const fontValue = {
     PoppinsBlack:"Poppins-Black",
     PoppinsBlackItalic:"Poppins-BlackItalic",
-    PoninsBold:"Poppins-Bold",
-    PoninsBoldItalic:"Poppins-BoldItalic",
-    PoninsExtraBold:"Poppins-ExtraBold",
-    PoninsExtraBoldItalic:"Poppins-ExtraBoldItalic",
-    PoninsLight:"Poppins-Light",
+    PoppinsBold:"Poppins-Bold",
+    PoppinsBoldItalic:"Poppins-BoldItalic",
+    PoppinsExtraBold:"Poppins-ExtraBold",
+    PoppinsExtraBoldItalic:"Poppins-ExtraBoldItalic",
+    PoppinsLight:"Poppins-Light",
     PoppinsMedium:"Poppins-Medium",
     PoppinsMediumItalic:"Poppins-MediumItalic",
     PoppinsRegular:"Poppins-Regular"

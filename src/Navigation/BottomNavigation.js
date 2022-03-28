@@ -64,7 +64,25 @@ const BottomNavigation = () => {
           tabBarIcon: ({color}) => (
             <AntDesign name="rightcircleo" size={24} color={color} />
           ),
-          title: '',
+          title: 'Donation Request',
+          headerLeft: () => (
+            <View style={{marginHorizontal:5}}>
+              <Image
+                resizeMode="contain"
+                style={{width:25}}
+                source={require('../../assets/image/menu.png')}
+              />
+            </View>
+          ),
+
+          headerRight: () => (
+            <View style={{marginHorizontal:5}}>
+             <View  >
+             <Badge status="error" value={10} />
+             </View>
+              <Fontisto name="bell" size={25} />
+            </View>
+          ),
         }}
       />
       <Tab.Screen
