@@ -1,19 +1,53 @@
 //import liraries
-import React from 'react';
+import React,{useEffect} from 'react';
 import { View, Text,Image, StyleSheet,StatusBar } from 'react-native';
+import { setStringValue,getMyStringValue } from '../../Global/AsyncStorge';
 
 import Onboarding from 'react-native-onboarding-swiper';
+import { commonStyle } from '../../Shared/commoStyle/CommonStyle';
+import fontValue from '../../Shared/commoStyle/FontValue';
+import { useNavigation } from '@react-navigation/core';
+
+
+
+
 
 // create a component
 const OnboardingScreen = () => {
+  const navigation=useNavigation()
+
+//create method to navigate login page 
+const OnBoardingDone = async () => {
+  try {
+    await setStringValue('onboarding', 'true');
+    await navigation.navigate('LoginScreen');
+  } catch (err) {
+    console.warn(err);
+  }
+};
+
+
+
+
     return (
         <View style={styles.container}>
             <StatusBar backgroundColor="green" barStyle="dark-content"/>
 
             <Onboarding
   pages={pic}
-  onDone={()=>console.warn("Next button working")}
-  onSkip={()=>console.warn("skip button working")}
+  onSkip={OnBoardingDone}
+  onDone={OnBoardingDone}
+  
+  // titleStyles={
+  //   commonStyle({
+  //     fontSize: 25,
+  //     fontFamily: fontValue.PoppinsMediumItalic,
+  //   }).text
+  // }
+  // subTitleStyles={
+  //   commonStyle({fontSize: 16, fontFamily: fontValue.PoppinsRegular})
+  //     .text
+  // }
   
 />
         </View>

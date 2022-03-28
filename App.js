@@ -1,24 +1,31 @@
 //import liraries
-import React from 'react';
-import { View, Text, StyleSheet } from 'react-native';
-import OnboardingScreen from './src/Screens/OnboardingScreen';
+import {NavigationContainer} from '@react-navigation/native';
+import React, {Component} from 'react';
+import {View, Text, StyleSheet, StatusBar} from 'react-native';
+import StackNavigation from './src/Navigation/StackNavigation';
+ 
 
 // create a component
 const App = () => {
   return (
-    <View style={styles.container}>
-      <OnboardingScreen/>
+    <View>
+      <StatusBar backgroundColor="white" />
+      <View style={styles.main}>
+        <NavigationContainer>
+          <StackNavigation />
+        </NavigationContainer>
+      </View>
     </View>
   );
 };
 
-// define your styles
-const styles = StyleSheet.create({
-  container: {
-   
-  },
-});
-
 //make this component available to the app
 export default App;
+
+const styles = StyleSheet.create({
+  main: {
+    height: '100%',
+    width: '100%',
+  },
+});
 
