@@ -92,7 +92,26 @@ const BottomNavigation = () => {
           tabBarIcon: ({color}) => (
             <AntDesign name="user" size={24} color={color} />
           ),
-          title: '',
+          title: 'Profile',
+          headerLeft: () => (
+            <View style={{marginHorizontal:5}}>
+              <Image
+                resizeMode="contain"
+                style={{width:25,marginLeft:10}}
+                source={require('../../assets/image/menu.png')}
+              />
+            </View>
+          ),
+
+          headerRight: () => (
+            <View style={{marginHorizontal:5}}>
+             
+              <Feather name="edit" size={25} />
+              <View  >
+             <Text>Edit</Text>
+             </View>
+            </View>
+          ),
         }}
       />
     </Tab.Navigator>
